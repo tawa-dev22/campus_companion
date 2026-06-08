@@ -147,3 +147,21 @@
 2026-04-30 11:00:32:032 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
 2026-04-30 11:00:32:032 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
 2026-04-30 11:00:32:032 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-05 16:11:05:115 [31merror[39m: [31mFailed to create audit log: AuditLog validation failed: module: `USER_MANAGEMENT` is not a valid enum value for path `module`.[39m
+2026-06-05 16:22:30:2230 [31merror[39m: [31m403 - You do not have permission to perform this action - /api/assignments - POST - ::1[39m
+2026-06-05 16:22:36:2236 [31merror[39m: [31m403 - You do not have permission to perform this action - /api/assignments - POST - ::1[39m
+2026-06-06 04:42:06:426 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 04:42:06:426 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 04:42:06:426 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 04:42:06:426 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 10:18:31:1831 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/programs - GET - ::1[39m
+2026-06-06 10:18:31:1831 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/programs - GET - ::1[39m
+2026-06-06 10:18:31:1831 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/assignments - GET - ::1[39m
+2026-06-06 10:18:31:1831 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/assignments - GET - ::1[39m
+2026-06-06 11:05:19:519 [31merror[39m: [31mFailed to create audit log: AuditLog validation failed: module: `USER_MANAGEMENT` is not a valid enum value for path `module`.[39m
+2026-06-06 11:05:39:539 [31merror[39m: [31mFailed to create audit log: AuditLog validation failed: module: `USER_MANAGEMENT` is not a valid enum value for path `module`.[39m
+2026-06-06 11:56:52:5652 [31merror[39m: [31m500 - Validation failed: gender: `` is not a valid enum value for path `gender`. - /api/profile/update - PUT - ::1[39m
+2026-06-06 14:07:15:715 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 14:07:15:715 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 14:07:15:715 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-06 14:07:15:715 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m

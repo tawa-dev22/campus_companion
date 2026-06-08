@@ -27,7 +27,25 @@ const TimetablePage = () => {
     day: 'Monday',
     startTime: '',
     endTime: '',
+    level: 'Level 1.1',
+    program: '',
   });
+
+  // Programs from database
+  const [programs, setPrograms] = useState([]);
+
+  const fetchPrograms = async () => {
+    try {
+      const response = await client.get('/programs');
+      const list = response.data || [];
+      setPrograms(list);
+      if (list.length > 0) {
+        setFormData(prev => ({ ...prev, program: prev.program || list[0].name }));
+      }
+    } catch (error) {
+      console.error('Failed to load programs', error);
+    }
+  };
 
   const fetchEntries = async () => {
     try {
@@ -41,6 +59,7 @@ const TimetablePage = () => {
   };
 
   useEffect(() => {
+    fetchPrograms();
     fetchEntries();
   }, []);
 
@@ -79,7 +98,7 @@ const TimetablePage = () => {
   };
 
   const resetForm = () => {
-    setFormData({ courseTitle: '', lecturer: '', venue: '', day: 'Monday', startTime: '', endTime: '' });
+    setFormData({ courseTitle: '', lecturer: '', venue: '', day: 'Monday', startTime: '', endTime: '', level: 'Level 1.1', program: programs[0]?.name || '' });
     setEditingEntry(null);
   };
 
@@ -92,6 +111,8 @@ const TimetablePage = () => {
       day: entry.day,
       startTime: entry.startTime,
       endTime: entry.endTime,
+      level: entry.level || 'Level 1.1',
+      program: entry.program || 'Computer Science',
     });
     setIsModalOpen(true);
   };
@@ -162,6 +183,11 @@ const TimetablePage = () => {
                         </div>
                         
                         <div className="space-y-1 text-sm text-slate-500">
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-black uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
+                              {entry.program || 'Computer Science'} • {entry.level || 'Level 1.1'}
+                            </span>
+                          </div>
                           {entry.venue && (
                             <div className="flex items-center gap-2">
                               <MapPin className="w-4 h-4 text-slate-400" />
@@ -225,16 +251,52 @@ const TimetablePage = () => {
             />
           </div>
           
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-slate-700 ml-1">Day of Week</label>
-            <select 
-              name="day" 
-              value={formData.day} 
-              onChange={handleInputChange}
-              className="input-premium bg-white"
-            >
-              {DAYS_OF_WEEK.map(day => <option key={day} value={day}>{day}</option>)}
-            </select>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-medium text-slate-700 ml-1">Day of Week</label>
+              <select 
+                name="day" 
+                value={formData.day} 
+                onChange={handleInputChange}
+                className="input-premium bg-white"
+              >
+                {DAYS_OF_WEEK.map(day => <option key={day} value={day}>{day}</option>)}
+              </select>
+            </div>
+            
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-medium text-slate-700 ml-1">Student Program</label>
+              <select 
+                name="program" 
+                value={formData.program} 
+                onChange={handleInputChange}
+                className="input-premium bg-white"
+              >
+                <option value="">-- Select Program --</option>
+                {programs.map(p => (
+                  <option key={p._id} value={p.name}>{p.name}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-medium text-slate-700 ml-1">Student Level</label>
+              <select 
+                name="level" 
+                value={formData.level} 
+                onChange={handleInputChange}
+                className="input-premium bg-white"
+              >
+                <option value="Level 1.1">Level 1.1</option>
+                <option value="Level 1.2">Level 1.2</option>
+                <option value="Level 2.1">Level 2.1</option>
+                <option value="Level 2.2">Level 2.2</option>
+                <option value="Level 3.1">Level 3.1</option>
+                <option value="Level 3.2">Level 3.2</option>
+                <option value="Level 4.1">Level 4.1</option>
+                <option value="Level 4.2">Level 4.2</option>
+              </select>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">

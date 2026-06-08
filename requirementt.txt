@@ -1,0 +1,99 @@
+========================================================================
+                     CAMPUS COMPANION - SYSTEM REQUIREMENTS & RUN GUIDE
+========================================================================
+
+To run the Campus Companion application on your PC, you need to install the
+prerequisites, configure the environment variables, and start the backend
+and frontend servers. Below is the detailed guide.
+
+------------------------------------------------------------------------
+1. SOFTWARE TO INSTALL ON YOUR PC
+------------------------------------------------------------------------
+
+Before running the application, make sure the following are installed:
+
+- **Node.js (LTS Version - v18.x or v20.x recommended)**
+  * Description: Required to run the JavaScript runtime environment for the backend API and build the frontend.
+  * Download: https://nodejs.org/
+  * Verification: Open your command prompt/terminal and run:
+    node -v
+    npm -v
+
+- **MongoDB Community Server (v6.0 or higher)**
+  * Description: The database for storing application data (users, courses, timetables, assignments, etc.).
+  * Download: https://www.mongodb.com/try/download/community
+  * Run: Make sure the MongoDB service is running locally on your PC (usually defaults to port 27017).
+  * Verification: Connect via MongoDB Compass or run local mongod service.
+
+- **Git (Optional but recommended)**
+  * Description: Used for cloning and managing the repository.
+  * Download: https://git-scm.com/
+
+- **Docker Desktop (Optional)**
+  * Description: Used if you want to run the entire system inside Docker containers without installing MongoDB or Node.js manually.
+  * Download: https://www.docker.com/products/docker-desktop/
+
+
+------------------------------------------------------------------------
+2. MANUAL SETUP & EXECUTION STEPS
+------------------------------------------------------------------------
+
+If running directly on your host operating system, follow these steps:
+
+--- STEP 1: CONFIGURE THE DATABASE & API (BACKEND) ---
+1. Open a terminal/command prompt.
+2. Navigate to the backend directory:
+   cd backend
+3. Install the dependencies:
+   npm install
+4. Create the configuration file (environment variables):
+   * Copy the '.env.example' file to a new file named '.env'
+   * On Windows:
+     copy .env.example .env
+   * On macOS/Linux:
+     cp .env.example .env
+5. Open the '.env' file in a text editor and ensure the values are correct:
+   PORT=5000
+   MONGODB_URI=mongodb://127.0.0.1:27017/campus_companion
+   JWT_SECRET=change_this_to_a_strong_secret
+   CLIENT_URL=http://localhost:5173
+6. Start the backend developer server:
+   npm run dev
+   * Note: The server will automatically seed initial roles, default admin user, and academic programs if the database is empty.
+   * It will run on: http://localhost:5000
+
+--- STEP 2: CONFIGURE THE FRONTEND ---
+1. Open a second terminal/command prompt (keep the backend terminal running).
+2. Navigate to the frontend directory:
+   cd frontend
+3. Install the dependencies:
+   npm install
+4. Create the frontend environment configuration:
+   * Copy the '.env.example' file to a new file named '.env'
+   * On Windows:
+     copy .env.example .env
+   * On macOS/Linux:
+     cp .env.example .env
+5. Open the '.env' file and verify it points to the backend API:
+   VITE_API_URL=http://localhost:5000/api
+6. Start the frontend development server:
+   npm run dev
+7. Open your browser and navigate to the address displayed in the console:
+   http://localhost:5173
+
+
+------------------------------------------------------------------------
+3. RUNNING VIA DOCKER (ALTERNATIVE METHOD)
+------------------------------------------------------------------------
+
+If you have Docker and Docker Compose installed:
+
+1. Open your terminal in the root directory (where docker-compose.yml is located).
+2. Start the services:
+   docker-compose up --build
+3. This will start:
+   - MongoDB database container (port 27017)
+   - Backend API container (port 5000)
+   - Frontend application container (port 5173 or 80 depending on configuration)
+4. To stop the containers:
+   docker-compose down

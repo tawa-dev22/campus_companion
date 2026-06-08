@@ -7,6 +7,8 @@ export const timetableSchema = Joi.object({
   day: Joi.string().required(),
   startTime: Joi.string().required(),
   endTime: Joi.string().required(),
+  level: Joi.string().allow('', null),
+  program: Joi.string().allow('', null),
 });
 
 export const assignmentSchema = Joi.object({
@@ -15,6 +17,9 @@ export const assignmentSchema = Joi.object({
   dueDate: Joi.date().required(),
   status: Joi.string().valid('pending', 'in-progress', 'submitted').default('pending'),
   notes: Joi.string().allow('', null),
+  priority: Joi.string().valid('Low', 'Medium', 'High').default('Medium'),
+  level: Joi.string().allow('', null),
+  program: Joi.string().allow('', null),
 });
 
 export const eventSchema = Joi.object({

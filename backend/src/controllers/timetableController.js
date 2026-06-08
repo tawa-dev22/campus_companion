@@ -1,6 +1,7 @@
 import Timetable from '../models/Timetable.js';
 import * as contentService from '../services/contentService.js';
 import { logAudit } from '../utils/auditLogger.js';
+import { getStudentFilters } from '../utils/filterHelper.js';
 
 export const createTimetable = async (req, res, next) => {
   try {
@@ -15,7 +16,17 @@ export const createTimetable = async (req, res, next) => {
 export const getTimetables = async (req, res, next) => {
   try {
     const { page, limit, sort } = req.query;
-    const result = await contentService.getItems(Timetable, {}, { page, limit, sort, populate: 'user' });
+    const query = {};
+    if (req.user.role?.name === 'Student') {
+      const studentFilters = getStudentFilters(req.user);
+      query.level = studentFilters.level;
+      query.program = studentFilters.program;
+    } else if (req.user.role?.name === 'Admin') {
+      // Admins only see timetables they posted
+      query.user = req.user._id;
+    }
+    // System Administrator sees all — no filter applied
+    const result = await contentService.getItems(Timetable, query, { page, limit, sort, populate: 'user' });
     res.status(200).json({ status: 'success', ...result });
   } catch (error) {
     next(error);

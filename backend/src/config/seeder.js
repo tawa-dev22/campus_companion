@@ -124,6 +124,21 @@ export async function seedRBAC() {
       existingAdmin.role = seededRoles['System Administrator']._id;
       await existingAdmin.save();
     }
+
+    // 4. Seed Programs if empty
+    const Program = (await import('../models/Program.js')).default;
+    const existingProgramsCount = await Program.countDocuments();
+    if (existingProgramsCount === 0) {
+      const defaultPrograms = [
+        { name: 'Computer Science', code: 'CS' },
+        { name: 'Information Systems', code: 'IS' },
+        { name: 'Computer Engineering', code: 'CE' },
+        { name: 'Electrical Engineering', code: 'EE' },
+        { name: 'Business Administration', code: 'BA' }
+      ];
+      await Program.insertMany(defaultPrograms);
+      logger.info('Default programs seeded successfully.');
+    }
   } catch (error) {
     logger.error(`RBAC seeding failed: ${error.message}`);
     throw error;

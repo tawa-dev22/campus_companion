@@ -23,7 +23,7 @@ const findRoleFromStoredValue = async (storedRole) => {
 const resolveUserRole = async (user) => {
   const currentRole = user.role;
 
-  if (currentRole.name && Array.isArray(currentRole.permissions)) {
+  if (currentRole && currentRole.name && Array.isArray(currentRole.permissions) && (currentRole.permissions.length === 0 || (currentRole.permissions[0] && typeof currentRole.permissions[0] === 'object' && currentRole.permissions[0].name))) {
     return currentRole;
   }
 
@@ -65,7 +65,10 @@ export const authenticate = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Check if user still exists
-    const user = await User.findById(decoded.id).populate('role');
+    const user = await User.findById(decoded.id).populate({
+      path: 'role',
+      populate: { path: 'permissions' }
+    });
 
     if (!user) {
       return next(new AppError('The user belonging to this token no longer exists.', 401));

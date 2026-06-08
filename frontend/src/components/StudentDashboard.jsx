@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import StatCard from '../components/StatCard';
 import Card from '../components/ui/Card';
 import Badge from '../components/ui/Badge';
 import { BookOpen, Calendar, Bell, ShoppingBag, Clock, MapPin, ChevronRight, Users } from 'lucide-react';
 
 const StudentDashboard = ({ data }) => {
+  const navigate = useNavigate();
   const { stats, upcomingAssignments, upcomingEvents, discoverableMarketplace, discoverableGroups } = data;
 
   return (
@@ -17,14 +19,14 @@ const StudentDashboard = ({ data }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <StatCard title="Study Groups" value={stats.myGroups || 0} icon={Users} color="primary" />
-        <StatCard title="Assignments" value={stats.pendingAssignments || 0} icon={BookOpen} color="indigo" />
-        <StatCard title="Campus Events" value={stats.upcomingEventsCount || 0} icon={Bell} color="emerald" />
+        <StatCard title="Study Groups" value={stats.myGroups || 0} icon={Users} color="primary" onClick={() => navigate('/study-groups')} />
+        <StatCard title="Assignments" value={stats.pendingAssignments || 0} icon={BookOpen} color="indigo" onClick={() => navigate('/assignments')} />
+        <StatCard title="Campus Events" value={stats.upcomingEventsCount || 0} icon={Bell} color="emerald" onClick={() => navigate('/events')} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Assignments Section */}
-        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50">
+        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50 cursor-pointer hover:shadow-2xl hover:scale-[1.01] transition-all duration-300" onClick={() => navigate('/assignments')}>
           <Card.Header 
             title="Deadlines" 
             subtitle="Upcoming assignment submissions" 
@@ -62,7 +64,7 @@ const StudentDashboard = ({ data }) => {
         </Card>
 
         {/* Events Section */}
-        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50">
+        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50 cursor-pointer hover:shadow-2xl hover:scale-[1.01] transition-all duration-300" onClick={() => navigate('/events')}>
           <Card.Header 
             title="Campus Events" 
             subtitle="Don't miss out on campus life" 
@@ -103,7 +105,7 @@ const StudentDashboard = ({ data }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Marketplace Discovery */}
-        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50">
+        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50 cursor-pointer hover:shadow-2xl hover:scale-[1.01] transition-all duration-300" onClick={() => navigate('/marketplace')}>
           <Card.Header 
             title="Marketplace" 
             subtitle="Recent items for sale from students" 
@@ -143,7 +145,7 @@ const StudentDashboard = ({ data }) => {
         </Card>
 
         {/* Study Groups Discovery */}
-        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50">
+        <Card className="!rounded-[32px] border-none shadow-xl shadow-slate-200/50 cursor-pointer hover:shadow-2xl hover:scale-[1.01] transition-all duration-300" onClick={() => navigate('/study-groups')}>
           <Card.Header 
             title="Study Groups" 
             subtitle="Find study partners for your courses" 
@@ -161,7 +163,7 @@ const StudentDashboard = ({ data }) => {
                   </div>
                 </div>
                 <div className="flex items-center gap-1.5 px-2 py-1 bg-white rounded-lg border border-slate-100 shadow-sm shrink-0 ml-4">
-                  <Users className="w-3 h-3 text-slate-400" />
+                  <Users className="w-3.5 h-3.5 text-slate-400" />
                   <span className="text-[10px] font-black text-slate-600">{group.members?.length || 0}</span>
                 </div>
               </div>

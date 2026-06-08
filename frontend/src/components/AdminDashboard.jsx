@@ -2,10 +2,12 @@ import React from 'react';
 import StatCard from '../components/StatCard';
 import Card from '../components/ui/Card';
 import { Calendar, BookOpen, Bell, ShieldCheck, TrendingUp, AlertCircle, PlusCircle, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from './ui/Button';
+import Badge from './ui/Badge';
 
 const AdminDashboard = ({ data }) => {
+  const navigate = useNavigate();
   const { stats, recentActivity } = data;
 
   return (
@@ -28,9 +30,9 @@ const AdminDashboard = ({ data }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Timetables" value={stats.myEvents || 0} icon={Calendar} trend={+5} color="primary" />
-        <StatCard title="Assignments" value={stats.myAssignments || 0} icon={BookOpen} trend={+14} color="indigo" />
-        <StatCard title="Total Students" value={stats.totalStudents || 0} icon={UsersIcon} trend={+8} color="emerald" />
+        <StatCard title="Timetables" value={stats.myEvents || 0} icon={Calendar} trend={stats.timetableTrend || 0} color="primary" onClick={() => navigate('/timetable')} />
+        <StatCard title="Assignments" value={stats.myAssignments || 0} icon={BookOpen} trend={stats.assignmentTrend || 0} color="indigo" onClick={() => navigate('/assignments')} />
+        <StatCard title="Total Students" value={stats.totalStudents || 0} icon={UsersIcon} trend={stats.studentTrend || 0} color="emerald" onClick={() => navigate('/admin/users')} />
         <StatCard title="System Health" value="99.9%" icon={ShieldCheck} color="violet" />
       </div>
 

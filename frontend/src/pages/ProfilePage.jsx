@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import client from '../api/client';
 import toast from 'react-hot-toast';
@@ -55,6 +55,21 @@ const ProfilePage = () => {
   });
 
   const fileInputRef = useRef(null);
+
+  // Programs from database
+  const [programs, setPrograms] = useState([]);
+
+  useEffect(() => {
+    const fetchPrograms = async () => {
+      try {
+        const response = await client.get('/programs');
+        setPrograms(response.data || []);
+      } catch (error) {
+        console.error('Failed to load programs', error);
+      }
+    };
+    fetchPrograms();
+  }, []);
 
   const handleInputChange = (e) => {
     setProfileData({ ...profileData, [e.target.name]: e.target.value });
@@ -153,9 +168,9 @@ const ProfilePage = () => {
       icon: GraduationCap,
       fields: isStudent ? [
         { label: 'Student ID', name: 'studentId', type: 'text', icon: IdCard, editable: true },
-        { label: 'Program/Course', name: 'program', type: 'text', icon: BookOpen, editable: true },
+        { label: 'Program/Course', name: 'program', type: 'select', icon: BookOpen, editable: true, options: programs.map(p => p.name) },
         { label: 'Department', name: 'department', type: 'text', icon: Building, editable: true },
-        { label: 'Level/Year', name: 'level', type: 'text', icon: GraduationCap, editable: true },
+        { label: 'Level/Year', name: 'level', type: 'select', icon: GraduationCap, editable: true, options: ['Level 1.1', 'Level 1.2', 'Level 2.1', 'Level 2.2', 'Level 3.1', 'Level 3.2', 'Level 4.1', 'Level 4.2'] },
       ] : [
         { label: 'Staff ID', name: 'staffId', type: 'text', icon: IdCard, editable: true },
         { label: 'Department', name: 'department', type: 'text', icon: Building, editable: true },

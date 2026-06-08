@@ -30,4 +30,12 @@ router.route('/:id')
     assignmentController.deleteAssignment
   );
 
+// Student Submissions
+router.post('/:id/submit', upload.single('document'), assignmentController.submitAssignment);
+
+// Admin Submissions Management
+router.get('/submissions/all', authorize('manage_assignments'), assignmentController.getAllSubmissions);
+router.get('/:id/submissions', authorize('manage_assignments'), assignmentController.getSubmissionsForAssignment);
+router.patch('/submissions/:submissionId', authorize('manage_assignments'), assignmentController.gradeSubmission);
+
 export default router;

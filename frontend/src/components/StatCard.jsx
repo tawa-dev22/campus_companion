@@ -3,7 +3,7 @@ import { cn } from '../utils/cn';
 import Card from './ui/Card';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 
-const StatCard = ({ title, value, icon: Icon, trend, color = 'primary', className }) => {
+const StatCard = ({ title, value, icon: Icon, trend, color = 'primary', className, onClick, ...props }) => {
   const colorMap = {
     primary: 'text-primary bg-primary/5 group-hover:bg-primary group-hover:text-white',
     accent: 'text-accent bg-accent/5 group-hover:bg-accent group-hover:text-white',
@@ -14,10 +14,15 @@ const StatCard = ({ title, value, icon: Icon, trend, color = 'primary', classNam
   };
 
   return (
-    <Card className={cn(
-      'flex items-center gap-5 p-6 group hover:border-primary/20 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 border-none shadow-sm', 
-      className
-    )}>
+    <Card 
+      onClick={onClick}
+      className={cn(
+        'flex items-center gap-5 p-6 group hover:border-primary/20 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 border-none shadow-sm', 
+        onClick && 'cursor-pointer hover:scale-[1.02] active:scale-[0.98]',
+        className
+      )}
+      {...props}
+    >
       <div className={cn(
         "w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 group-hover:-rotate-6 shadow-sm",
         colorMap[color] || colorMap.primary

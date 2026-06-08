@@ -22,13 +22,27 @@ const storage = multer.diskStorage({
     let dest = 'uploads/';
     if (file.fieldname === 'image' || file.fieldname === 'video') {
       dest += 'events';
-    } else if (file.fieldname === 'document') {
-      dest += 'assignments';
     } else if (file.fieldname === 'marketplaceImages') {
       dest += 'marketplace';
     } else if (file.fieldname === 'profilePicture') {
       dest += 'profiles';
+    } else if (file.fieldname === 'document') {
+      if (req.originalUrl.includes('/submit') && req.user) {
+        const program = req.user.program || 'General';
+        const level = req.user.level || 'Level 1.1';
+        const cleanProgram = program.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'General';
+        const cleanLevel = level.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'Level 1.1';
+        dest += `submissions/${cleanProgram}/${cleanLevel}`;
+      } else {
+        dest += 'assignments';
+      }
     }
+    
+    // Ensure destination directory exists
+    if (!fs.existsSync(dest)) {
+      fs.mkdirSync(dest, { recursive: true });
+    }
+    
     cb(null, dest);
   },
   filename: (req, file, cb) => {

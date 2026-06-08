@@ -18,6 +18,8 @@ import studyGroupRoutes from './routes/studyGroupRoutes.js';
 import profileRoutes from './routes/profileRoutes.js';
 import messageRoutes from './routes/messageRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
+import programRoutes from './routes/programRoutes.js';
 
 import { errorHandler } from './middleware/errorHandler.js';
 
@@ -67,6 +69,8 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/study-groups', studyGroupRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/programs', programRoutes);
 
 // Error Handling
 app.use(errorHandler);

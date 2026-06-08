@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 const timetableSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   courseTitle: { type: String, required: true },
+  level: { type: String, default: 'Level 1.1' },
+  program: { type: String, default: 'Computer Science' },
   lecturer: String,
   venue: String,
   day: { type: String, required: true },

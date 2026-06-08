@@ -5,6 +5,8 @@ const assignmentSchema = new mongoose.Schema({
   title: { type: String, required: true },
   module: { type: String, required: true },
   dueDate: { type: Date, required: true },
+  level: { type: String, default: 'Level 1.1' },
+  program: { type: String, default: 'Computer Science' },
   status: { type: String, enum: ['pending', 'in-progress', 'submitted'], default: 'pending' },
   notes: String,
   document: { type: String },

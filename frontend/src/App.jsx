@@ -20,6 +20,7 @@ import TimetablePage from './pages/TimetablePage';
 import ProfilePage from './pages/ProfilePage';
 import ChatPage from './pages/ChatPage';
 import SystemAuditPage from './pages/SystemAuditPage';
+import UsersPage from './pages/UsersPage';
 import { Hammer } from 'lucide-react';
 
 const UnderConstruction = ({ title }) => (
@@ -69,7 +70,7 @@ export default function App() {
               path="/admin/users" 
               element={
                 <ProtectedRoute roles={['System Administrator']}>
-                  <UnderConstruction title="User Management" />
+                  <UsersPage />
                 </ProtectedRoute>
               } 
             />

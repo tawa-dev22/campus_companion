@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Users, ShieldAlert, Activity, Database, Key, Server, Hash, FileText } from 'lucide-react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js';
 import { Pie, Line } from 'react-chartjs-2';
@@ -6,10 +7,12 @@ import StatCard from '../components/StatCard';
 import Card from '../components/ui/Card';
 import Button from './ui/Button';
 import Badge from './ui/Badge';
+import { cn } from '../utils/cn';
 
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement);
 
 const SystemAdminDashboard = ({ data }) => {
+  const navigate = useNavigate();
   const { stats, recentLogs } = data;
 
   const roleChartData = {
@@ -30,11 +33,11 @@ const SystemAdminDashboard = ({ data }) => {
           <p className="text-slate-500 font-medium mt-1">Infrastructure Health & Identity Management</p>
         </div>
         <div className="flex gap-3">
-          <Button variant="outline" className="bg-white rounded-2xl border-slate-200">
+          <Button variant="outline" className="bg-white rounded-2xl border-slate-200" onClick={() => navigate('/admin/system')}>
             <Server className="w-4 h-4 mr-2" />
             System Status
           </Button>
-          <Button variant="danger" className="rounded-2xl shadow-lg shadow-rose-200">
+          <Button variant="danger" className="rounded-2xl shadow-lg shadow-rose-200" onClick={() => navigate('/admin/system')}>
             <ShieldAlert className="w-4 h-4 mr-2" />
             Security Audit
           </Button>
@@ -42,10 +45,10 @@ const SystemAdminDashboard = ({ data }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Total Users" value={stats.totalUsers} icon={Users} trend={+2} />
-        <StatCard title="Active Assignments" value={stats.totalAssignments} icon={FileText} color="indigo" />
-        <StatCard title="Global Events" value={stats.totalEvents} icon={Activity} color="emerald" />
-        <StatCard title="Market Listings" value={stats.totalMarketplace} icon={Database} color="violet" />
+        <StatCard title="Total Users" value={stats.totalUsers} icon={Users} trend={stats.userTrend || 0} onClick={() => navigate('/admin/users')} />
+        <StatCard title="Active Assignments" value={stats.totalAssignments} icon={FileText} color="indigo" trend={stats.assignmentTrend || 0} onClick={() => navigate('/assignments')} />
+        <StatCard title="Global Events" value={stats.totalEvents} icon={Activity} color="emerald" trend={stats.eventTrend || 0} onClick={() => navigate('/events')} />
+        <StatCard title="Market Listings" value={stats.totalMarketplace} icon={Database} color="violet" trend={stats.marketplaceTrend || 0} onClick={() => navigate('/marketplace')} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
