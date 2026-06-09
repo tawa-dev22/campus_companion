@@ -1,8 +1,19 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
+export const getBackendUrl = () => {
+  const apiUrl = import.meta.env.VITE_API_URL || '';
+  if (apiUrl) {
+    return apiUrl.replace(/\/api\/?$/, '');
+  }
+  if (window.location.port === '5173') {
+    return 'http://localhost:5000';
+  }
+  return window.location.origin;
+};
+
 const client = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
   },

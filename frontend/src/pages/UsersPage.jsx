@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import Card from '../components/ui/Card';
 import Badge from '../components/ui/Badge';
 import Button from '../components/ui/Button';
@@ -395,7 +395,7 @@ export default function UsersPage() {
                                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold shadow-sm shrink-0">
                                   {u.profilePicture ? (
                                     <img 
-                                      src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}${u.profilePicture}`} 
+                                      src={`${getBackendUrl()}${u.profilePicture}`} 
                                       alt="" 
                                       className="w-full h-full object-cover rounded-2xl"
                                     />

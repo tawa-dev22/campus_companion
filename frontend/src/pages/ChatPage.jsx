@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -102,7 +102,7 @@ const ChatPage = () => {
             <div className="w-12 h-12 rounded-xl bg-slate-50 overflow-hidden shrink-0">
               {product.images?.[0] ? (
                 <img 
-                  src={`http://localhost:5000/${product.images[0].replace('\\', '/')}`} 
+                  src={`${getBackendUrl()}/${product.images[0].replace('\\', '/')}`} 
                   alt="" 
                   className="w-full h-full object-cover"
                 />

@@ -14,11 +14,11 @@ services:
       - "5000:5000"
     environment:
       - MONGODB_URI=mongodb://mongodb:27017/campus-companion
-      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${JWT_SECRET:-default_campus_companion_secret_key_123456789}
       - JWT_EXPIRES_IN=7d
-      - SYSTEM_ADMIN_NAME=${SYSTEM_ADMIN_NAME}
-      - SYSTEM_ADMIN_EMAIL=${SYSTEM_ADMIN_EMAIL}
-      - SYSTEM_ADMIN_PASSWORD=${SYSTEM_ADMIN_PASSWORD}
+      - SYSTEM_ADMIN_NAME=${SYSTEM_ADMIN_NAME:-System Admin}
+      - SYSTEM_ADMIN_EMAIL=${SYSTEM_ADMIN_EMAIL:-admin@campus.com}
+      - SYSTEM_ADMIN_PASSWORD=${SYSTEM_ADMIN_PASSWORD:-Admin123!}
       - NODE_ENV=production
     depends_on:
       - mongodb

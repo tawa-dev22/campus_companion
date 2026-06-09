@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -164,7 +164,7 @@ const EventsPage = () => {
                <Card className="!p-0 !rounded-[32px] overflow-hidden border-none shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2 h-full flex flex-col">
                 <div className="h-56 overflow-hidden relative group-hover:h-64 transition-all duration-500">
                   <img 
-                    src={event.image ? (event.image.startsWith('http') ? event.image : `http://localhost:5000/${event.image.replace('\\', '/')}`) : 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80'} 
+                    src={event.image ? (event.image.startsWith('http') ? event.image : `${getBackendUrl()}/${event.image.replace('\\', '/')}`) : 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80'} 
                     alt={event.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />

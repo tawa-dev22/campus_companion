@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -338,8 +338,7 @@ const AssignmentsPage = () => {
 
                 <div className="pt-6 mt-6 border-t border-slate-100 flex flex-col gap-3">
                    {assignment.document ? (
-                      <a 
-                        href={assignment.document.startsWith('http') ? assignment.document : `http://localhost:5000/${assignment.document.replace('\\', '/')}`}
+                      <a href={assignment.document.startsWith('http') ? assignment.document : `${getBackendUrl()}/${assignment.document.replace('\\', '/')}`}
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center justify-between p-4 bg-slate-900 text-white rounded-2xl hover:bg-primary transition-all shadow-lg shadow-slate-200"
@@ -645,8 +644,7 @@ const AssignmentsPage = () => {
                         ) : (
                           <Badge variant="warning" className="font-bold uppercase text-[9px]">Needs Grade</Badge>
                         )}
-                        <a 
-                          href={sub.document.startsWith('http') ? sub.document : `http://localhost:5000/${sub.document.replace('\\', '/')}`}
+                        <a href={sub.document.startsWith('http') ? sub.document : `${getBackendUrl()}/${sub.document.replace('\\', '/')}`}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex items-center gap-1.5 text-xs text-primary font-bold hover:underline"

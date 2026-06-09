@@ -3835,3 +3835,127 @@
 2026-06-08 12:20:01:201 [32minfo[39m: [32mbackend connected successful[39m
 2026-06-08 12:20:04:204 [32minfo[39m: [32mNew client connected: N1qGeOU2AjHYvslKAAAB[39m
 2026-06-08 12:20:04:204 [37mdebug[39m: [37mUser 69e7193f0a1dd4a041b7ce3c joined their notification room[39m
+2026-06-08 13:06:32:632 [32minfo[39m: [32mSMTP connection verified successfully[39m
+2026-06-08 13:06:32:632 [32minfo[39m: [32mbackend connected successful[39m
+2026-06-08 13:06:37:637 [32minfo[39m: [32mNew client connected: bjEewRvmLKfGzHfRAAAB[39m
+2026-06-08 13:06:37:637 [37mdebug[39m: [37mUser 69e7193f0a1dd4a041b7ce3c joined their notification room[39m
+2026-06-08 13:07:11:711 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-08 13:07:11:711 [37mdebug[39m: [37mError: Your token has expired. Please log in again.[39m
+[37m    at authenticate (file:///C:/Users/USR/Pictures/campus_companion/backend/src/middleware/authMiddleware.js:100:19)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:149:13)[39m
+[37m    at Route.dispatch (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:119:3)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:284:15[39m
+[37m    at router.process_params (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:346:12)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:280:10)[39m
+[37m    at router.handle (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:175:3)[39m
+[37m    at router (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:47:12)[39m
+2026-06-08 13:07:11:711 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:11 +0000] "GET /api/auth/me HTTP/1.1" 401 92 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:11:711 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-08 13:07:11:711 [37mdebug[39m: [37mError: Your token has expired. Please log in again.[39m
+[37m    at authenticate (file:///C:/Users/USR/Pictures/campus_companion/backend/src/middleware/authMiddleware.js:100:19)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:149:13)[39m
+[37m    at Route.dispatch (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:119:3)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:284:15[39m
+[37m    at router.process_params (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:346:12)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:280:10)[39m
+[37m    at router.handle (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:175:3)[39m
+[37m    at router (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:47:12)[39m
+2026-06-08 13:07:11:711 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:11 +0000] "GET /api/auth/me HTTP/1.1" 401 92 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:11:711 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-08 13:07:11:711 [37mdebug[39m: [37mError: Your token has expired. Please log in again.[39m
+[37m    at authenticate (file:///C:/Users/USR/Pictures/campus_companion/backend/src/middleware/authMiddleware.js:100:19)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:149:13)[39m
+[37m    at Route.dispatch (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:119:3)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:284:15[39m
+[37m    at router.process_params (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:346:12)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:280:10)[39m
+[37m    at router.handle (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:175:3)[39m
+[37m    at router (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:47:12)[39m
+2026-06-08 13:07:11:711 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:11 +0000] "GET /api/auth/me HTTP/1.1" 401 92 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:11:711 [31merror[39m: [31m401 - Your token has expired. Please log in again. - /api/auth/me - GET - ::1[39m
+2026-06-08 13:07:11:711 [37mdebug[39m: [37mError: Your token has expired. Please log in again.[39m
+[37m    at authenticate (file:///C:/Users/USR/Pictures/campus_companion/backend/src/middleware/authMiddleware.js:100:19)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:149:13)[39m
+[37m    at Route.dispatch (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\route.js:119:3)[39m
+[37m    at Layer.handle [as handle_request] (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\layer.js:95:5)[39m
+[37m    at C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:284:15[39m
+[37m    at router.process_params (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:346:12)[39m
+[37m    at next (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:280:10)[39m
+[37m    at router.handle (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:175:3)[39m
+[37m    at router (C:\Users\USR\Pictures\campus_companion\backend\node_modules\express\lib\router\index.js:47:12)[39m
+2026-06-08 13:07:11:711 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:11 +0000] "GET /api/auth/me HTTP/1.1" 401 92 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:16:716 [37mdebug[39m: [37mAudit Log: USER_LOGIN by 69e219cf505565ca95616ca1 in auth[39m
+2026-06-08 13:07:16:716 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:16 +0000] "POST /api/auth/login HTTP/1.1" 200 940 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:16:716 [32minfo[39m: [32mNew client connected: tg9KRuwzEP4ul2g4AAAD[39m
+2026-06-08 13:07:16:716 [37mdebug[39m: [37mUser 69e219cf505565ca95616ca1 joined their notification room[39m
+2026-06-08 13:07:16:716 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:16 +0000] "GET /api/notifications HTTP/1.1" 200 48 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:16:716 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:16 +0000] "GET /api/dashboard HTTP/1.1" 200 3741 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:07:16:716 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:07:16 +0000] "GET /api/dashboard HTTP/1.1" 200 3741 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:48:50:4850 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:48:50 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:48:50:4850 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:48:50 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:48:50:4850 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:48:50 +0000] "GET /api/timetable HTTP/1.1" 200 2055 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:48:50:4850 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:48:50 +0000] "GET /api/timetable HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:48:53:4853 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:48:53 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:48:53:4853 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:48:53 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:15:4915 [37mdebug[39m: [37mAudit Log: USER_LOGIN by 69e7193f0a1dd4a041b7ce3c in auth[39m
+2026-06-08 13:49:15:4915 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:15 +0000] "POST /api/auth/login HTTP/1.1" 200 963 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:15:4915 [32minfo[39m: [32mClient disconnected: tg9KRuwzEP4ul2g4AAAD[39m
+2026-06-08 13:49:15:4915 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:15 +0000] "GET /api/notifications HTTP/1.1" 200 952 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:15:4915 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:15 +0000] "GET /api/dashboard HTTP/1.1" 200 2984 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:15:4915 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:15 +0000] "GET /uploads/marketplace/marketplaceImages-1777265010864-410324579.webp HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:15:4915 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:15 +0000] "GET /api/dashboard HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:36:4936 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:36 +0000] "GET /api/marketplace HTTP/1.1" 200 2499 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:36:4936 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:36 +0000] "GET /api/marketplace HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:57:4957 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:57 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:57:4957 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:57 +0000] "GET /api/assignments HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:57:4957 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:57 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-08 13:49:57:4957 [35mhttp[39m: [35m::1 - - [08/Jun/2026:11:49:57 +0000] "GET /api/assignments HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:06:256 [32minfo[39m: [32mSMTP connection verified successfully[39m
+2026-06-09 12:25:06:256 [32minfo[39m: [32mbackend connected successful[39m
+2026-06-09 12:25:06:256 [32minfo[39m: [32mNew client connected: Z9qLPTZKM_0vsUB4AAAB[39m
+2026-06-09 12:25:06:256 [37mdebug[39m: [37mUser 69e7193f0a1dd4a041b7ce3c joined their notification room[39m
+2026-06-09 12:25:14:2514 [37mdebug[39m: [37mAudit Log: USER_LOGIN by 69e219cf505565ca95616ca1 in auth[39m
+2026-06-09 12:25:14:2514 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:14 +0000] "POST /api/auth/login HTTP/1.1" 200 940 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:14:2514 [32minfo[39m: [32mNew client connected: T2nZsSFfPj99gtiNAAAD[39m
+2026-06-09 12:25:14:2514 [37mdebug[39m: [37mUser 69e219cf505565ca95616ca1 joined their notification room[39m
+2026-06-09 12:25:14:2514 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:14 +0000] "GET /api/notifications HTTP/1.1" 200 48 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:14:2514 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:14 +0000] "GET /api/dashboard HTTP/1.1" 200 3668 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:14:2514 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:14 +0000] "GET /api/dashboard HTTP/1.1" 200 3668 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:29:2529 [37mdebug[39m: [37mAudit Log: USER_LOGIN by 69eee99b6fc1baef897bb792 in auth[39m
+2026-06-09 12:25:29:2529 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:29 +0000] "POST /api/auth/login HTTP/1.1" 200 868 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:29:2529 [32minfo[39m: [32mClient disconnected: T2nZsSFfPj99gtiNAAAD[39m
+2026-06-09 12:25:29:2529 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:29 +0000] "GET /api/notifications HTTP/1.1" 200 415 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:29:2529 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:29 +0000] "GET /api/dashboard HTTP/1.1" 200 3746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:25:29:2529 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:25:29 +0000] "GET /api/dashboard HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:26:57:2657 [32minfo[39m: [32mEmail sent: <70e0b1bf-181a-a005-daf9-ef67cfa4791e@gmail.com>[39m
+2026-06-09 12:26:57:2657 [37mdebug[39m: [37mAudit Log: USER_REGISTERED by 6a27ea6dfd8607cf41c4c09a in auth[39m
+2026-06-09 12:26:57:2657 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:26:57 +0000] "POST /api/auth/register HTTP/1.1" 201 104 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:34:2734 [37mdebug[39m: [37mAudit Log: OTP_VERIFIED by 6a27ea6dfd8607cf41c4c09a in auth[39m
+2026-06-09 12:27:34:2734 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:34 +0000] "POST /api/auth/verify HTTP/1.1" 200 712 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:39:2739 [37mdebug[39m: [37mAudit Log: USER_LOGIN by 6a27ea6dfd8607cf41c4c09a in auth[39m
+2026-06-09 12:27:39:2739 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:39 +0000] "POST /api/auth/login HTTP/1.1" 200 751 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:39:2739 [32minfo[39m: [32mNew client connected: YhodRACgW_73yOPpAAAF[39m
+2026-06-09 12:27:39:2739 [37mdebug[39m: [37mUser 6a27ea6dfd8607cf41c4c09a joined their notification room[39m
+2026-06-09 12:27:39:2739 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:39 +0000] "GET /api/notifications HTTP/1.1" 200 48 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:39:2739 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:39 +0000] "GET /api/dashboard HTTP/1.1" 200 1549 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:39:2739 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:39 +0000] "GET /uploads/marketplace/marketplaceImages-1777265010864-410324579.webp HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:39:2739 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:39 +0000] "GET /api/dashboard HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:48:2748 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:48 +0000] "GET /api/marketplace HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:48:2748 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:48 +0000] "GET /api/marketplace HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:50:2750 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:50 +0000] "GET /api/events HTTP/1.1" 200 908 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:50:2750 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:50 +0000] "GET /api/events HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:51:2751 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:51 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:51:2751 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:51 +0000] "GET /api/assignments HTTP/1.1" 200 86 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:51:2751 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:51 +0000] "GET /api/programs HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:27:51:2751 [35mhttp[39m: [35m::1 - - [09/Jun/2026:10:27:51 +0000] "GET /api/assignments HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"[39m
+2026-06-09 12:34:25:3425 [32minfo[39m: [32mSMTP connection verified successfully[39m
+2026-06-09 12:34:25:3425 [32minfo[39m: [32mbackend connected successful[39m
+2026-06-09 12:34:26:3426 [32minfo[39m: [32mNew client connected: WbvMuXm3gdYDAs5jAAAB[39m
+2026-06-09 12:34:26:3426 [37mdebug[39m: [37mUser 6a27ea6dfd8607cf41c4c09a joined their notification room[39m

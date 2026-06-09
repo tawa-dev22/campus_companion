@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import toast from 'react-hot-toast';
 import { 
   User, Mail, Phone, MapPin, Calendar, 
@@ -208,7 +208,7 @@ const ProfilePage = () => {
             >
               {user?.profilePicture ? (
                 <img 
-                  src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}${user.profilePicture}`} 
+                  src={`${getBackendUrl()}${user.profilePicture}`} 
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />

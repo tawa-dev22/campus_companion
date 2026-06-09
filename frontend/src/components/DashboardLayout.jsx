@@ -6,6 +6,7 @@ import { useNotifications } from '../context/NotificationContext';
 import NotificationDropdown from './NotificationDropdown';
 import { User, Bell, Search, Settings } from 'lucide-react';
 import { cn } from '../utils/cn';
+import { getBackendUrl } from '../api/client';
 
 const DashboardLayout = () => {
   const { user } = useAuth();
@@ -43,7 +44,7 @@ const DashboardLayout = () => {
               <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold shadow-lg shadow-primary/20 transform group-hover:scale-105 transition-transform">
                 {user?.profilePicture ? (
                   <img 
-                    src={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}${user.profilePicture}`} 
+                    src={`${getBackendUrl()}${user.profilePicture}`} 
                     alt="Profile" 
                     className="w-full h-full object-cover rounded-2xl"
                   />

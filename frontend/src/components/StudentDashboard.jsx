@@ -4,6 +4,7 @@ import StatCard from '../components/StatCard';
 import Card from '../components/ui/Card';
 import Badge from '../components/ui/Badge';
 import { BookOpen, Calendar, Bell, ShoppingBag, Clock, MapPin, ChevronRight, Users } from 'lucide-react';
+import { getBackendUrl } from '../api/client';
 
 const StudentDashboard = ({ data }) => {
   const navigate = useNavigate();
@@ -117,7 +118,7 @@ const StudentDashboard = ({ data }) => {
                   <div className="aspect-square rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 relative mb-2">
                     {item.images?.[0] ? (
                       <img 
-                        src={`http://localhost:5000/${item.images[0].replace('\\', '/')}`} 
+                        src={`${getBackendUrl()}/${item.images[0].replace('\\', '/')}`} 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         alt={item.title}
                       />

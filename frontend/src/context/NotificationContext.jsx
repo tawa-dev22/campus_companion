@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import { useAuth } from './AuthContext';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import toast from 'react-hot-toast';
 
 const NotificationContext = createContext(null);
@@ -30,8 +30,7 @@ export const NotificationProvider = ({ children }) => {
 
   useEffect(() => {
     if (user && !socket) {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-      const socketUrl = apiUrl.replace('/api', '');
+      const socketUrl = getBackendUrl();
       const newSocket = io(socketUrl);
       
       newSocket.on('connect', () => {

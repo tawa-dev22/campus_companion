@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import client from '../api/client';
+import client, { getBackendUrl } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -185,7 +185,7 @@ const MarketplacePage = () => {
 
                       {item.images && item.images.length > 0 ? (
                         <img 
-                          src={`http://localhost:5000/${item.images[0].replace('\\', '/')}`} 
+                          src={`${getBackendUrl()}/${item.images[0].replace('\\', '/')}`} 
                           alt={item.title}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
@@ -266,7 +266,7 @@ const MarketplacePage = () => {
             <div className="aspect-video rounded-2xl overflow-hidden bg-slate-50 relative">
               {selectedItem.images && selectedItem.images.length > 0 ? (
                 <img 
-                  src={`http://localhost:5000/${selectedItem.images[0].replace('\\', '/')}`} 
+                  src={`${getBackendUrl()}/${selectedItem.images[0].replace('\\', '/')}`} 
                   alt={selectedItem.title}
                   className="w-full h-full object-contain bg-slate-900"
                 />
